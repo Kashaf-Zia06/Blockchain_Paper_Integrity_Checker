@@ -6,6 +6,7 @@ import ApprovePaper from "./pages/ApprovePaper";
 import VerifyPaper from "./pages/VerifyPaper";
 import Governance from "./pages/Governance";
 import RoleLoader from "./components/RoleLoader";
+import ReleaseKey from "./pages/ReleaseKey";
 
 import {
   connectWallet,
@@ -381,6 +382,7 @@ function App() {
       </section>
         {role === "Admin" && <AdminSetup />}
         {role === "Professor" && <SubmitPaper />}
+        {role === "Professor" && <ReleaseKey />}
         {role === "Department Head" && <ApprovePaper />}
         {role && <VerifyPaper />}
         {role === "Academic Officer" && <Governance />}
