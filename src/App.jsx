@@ -6,7 +6,7 @@ import ApprovePaper from "./pages/ApprovePaper";
 import VerifyPaper from "./pages/VerifyPaper";
 import Governance from "./pages/Governance";
 import RoleLoader from "./components/RoleLoader";
-import ReleaseKey from "./pages/ReleaseKey";
+import ReleaseKey from "./pages/ReleaseKeys";
 
 import {
   connectWallet,
