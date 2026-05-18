@@ -1,0 +1,512 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "daoContract",
+				"type": "address"
+			}
+		],
+		"name": "DAOContractSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "departmentHead",
+				"type": "address"
+			}
+		],
+		"name": "DepartmentHeadAdded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			}
+		],
+		"name": "KeyReleased",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "departmentHead",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "approvalCount",
+				"type": "uint256"
+			}
+		],
+		"name": "PaperApproved",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			}
+		],
+		"name": "PaperCompromised",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			}
+		],
+		"name": "PaperLocked",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "courseCode",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "examTitle",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "professor",
+				"type": "address"
+			}
+		],
+		"name": "PaperSubmitted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "paperId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "isValid",
+				"type": "bool"
+			}
+		],
+		"name": "PaperVerified",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "professor",
+				"type": "address"
+			}
+		],
+		"name": "ProfessorAdded",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_head",
+				"type": "address"
+			}
+		],
+		"name": "addDepartmentHead",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_professor",
+				"type": "address"
+			}
+		],
+		"name": "addProfessor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_paperId",
+				"type": "uint256"
+			}
+		],
+		"name": "approvePaper",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "daoContract",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "decryptionKeys",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "departmentHeadCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "departmentHeads",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "hasApproved",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_paperId",
+				"type": "uint256"
+			}
+		],
+		"name": "markCompromised",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "paperCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "papers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "courseCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "examTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "paperHash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "encryptedFileReference",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "professor",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "examStartTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "requiredApprovals",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "approvalCount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "isLocked",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "isKeyReleased",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "isCompromised",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "professors",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_paperId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_decryptionKey",
+				"type": "string"
+			}
+		],
+		"name": "releaseKey",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_daoContract",
+				"type": "address"
+			}
+		],
+		"name": "setDAOContract",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_courseCode",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_examTitle",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_paperHash",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_encryptedFileReference",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_examStartTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_requiredApprovals",
+				"type": "uint256"
+			}
+		],
+		"name": "submitPaper",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_paperId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_hashToCheck",
+				"type": "string"
+			}
+		],
+		"name": "verifyPaper",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
