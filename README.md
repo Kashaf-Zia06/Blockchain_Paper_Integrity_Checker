@@ -44,7 +44,9 @@ Complete transparency maintained throughout the process
 
 **TECH STACK**
 Blockchain:      Ethereum (Sepolia Testnet)
+
 Smart Contracts: Solidity ^0.8.19
+
 Frontend:        React.js + Vite
 Styling:         CSS3
 Wallet:          MetaMask
