@@ -1,4 +1,5 @@
 **ExamChain - Blockchain-Based Exam Paper Integrity & Governance System**
+
 **PROJECT OVERVIEW**
 
 ExamChain is a decentralized blockchain-based system designed to secure academic examination papers from leaks, tampering, and unauthorized access. The system uses Ethereum smart contracts, cryptographic hashing, NFTs, and DAO governance to ensure transparency, accountability, and tamper-proof verification throughout the examination lifecycle.
