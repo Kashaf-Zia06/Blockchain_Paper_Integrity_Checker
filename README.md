@@ -9,6 +9,7 @@ ExamChain is a decentralized blockchain-based system designed to secure academic
 Instead of storing trust in centralized systems where exam papers can be modified or leaked without proof, ExamChain stores cryptographic SHA-256 hashes of exam papers on the blockchain. If any paper is altered, its hash changes instantly, making tampering immediately detectable.
 
 **KEY FEATURES**
+
 **1. Secure Exam Paper Submission**
 Faculty uploads encrypted exam paper
 SHA-256 hash generated automatically
@@ -43,10 +44,9 @@ Records cannot be deleted or modified
 Complete transparency maintained throughout the process
 
 **TECH STACK**
+
 Blockchain:      Ethereum (Sepolia Testnet)
-
 Smart Contracts: Solidity ^0.8.19
-
 Frontend:        React.js + Vite
 Styling:         CSS3
 Wallet:          MetaMask
@@ -56,6 +56,7 @@ NFT Standard:    ERC-721 (OpenZeppelin)
 IDE:             Remix IDE
 
 **SMART CONTRACTS**
+
 **1. ExamPaperVault.sol**
 Core smart contract of the system
 Handles exam paper submission and verification
@@ -77,6 +78,7 @@ Prevents double voting using mappings
 Executes proposals automatically after deadline
 
 **FOLDER STRUCTURE**
+
 Blockchain_Paper_Integrity_Checker/
 │
 ├── src/
@@ -123,6 +125,7 @@ Connect MetaMask wallet
 Approve blockchain connection
 
 **HOW TO USE THE SYSTEM**
+
 **SUBMIT EXAM PAPER**
 Upload encrypted exam file
 SHA-256 hash generated automatically
